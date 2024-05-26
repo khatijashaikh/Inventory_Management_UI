@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Noto Sans;
+}
+.display-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.table-heading {
+  font-size: 20px;
+}
+.sidebar-wrapper {
+  background-color: rgba(14, 21, 89, 1);
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+.logo-wrapper {
+  width: 100%;
+  height: 70px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.logo {
+  width: 110px;
+  height: 35px;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 10px 10px 0;
+}
+.pages-wrapper {
+  width: 100%;
+  height: calc(100vh - 70px);
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px 20px 20px 0;
+}
+.dropdown1 {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+.dropdown2 {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+}
+.page-wrapper {
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  background: transparent;
+  color: white;
+  font-size: 13px;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+.page-icon {
+  width: 20px;
+  height: 20px;
+}
+.header-wrapper {
+  background-color: white;
+  width: 80%;
+  height: 70px;
+  padding: 0px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.placeholder-div {
+  width: 20px;
+  height: 20px;
+}
+.page-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.sub-page-name {
+  font-size: 16px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-right-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.content-wrapper {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  margin-left: 20%;
+  margin-top: 70px;
+  padding: 20px;
+}
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease; /* Optional: Add transition for smooth animation */
+}
+
+#navtable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #333;
+}
+
+th {
+  background-color: rgba(88, 115, 197, 255);
+  color: white;
+  font-weight: bold;
+}
+.city3 {
+  border: 1px solid rgba(128, 160, 255, 255);
+  color: white;
+  background-color: rgba(128, 160, 255, 255);
+  padding: 10px 20px;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+.city2 {
+  border: 1px solid rgba(128, 160, 255, 255);
+  color: rgba(128, 160, 255, 255);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 0px 0px 0px 0px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+.city1 {
+  border: 1px solid rgba(128, 160, 255, 255);
+  color: rgba(128, 160, 255, 255);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px 0px 0px 5px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+#reportDiv {
+  display: none;
+}
+#userDiv {
+  display: none;
+}
+.report-info {
+  gap: 0px;
+  display: flex;
+  align-items: center;
+}
+.filtr {
+  border: 1px solid rgba(128, 160, 255, 255);
+  color: rgba(128, 160, 255, 255);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-collapse: collapse;
+  padding: 10px 20px;
+}
+.circle-icon {
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.mrch {
+  border: 1px solid rgba(128, 160, 255, 255);
+  color: rgba(128, 160, 255, 255);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+.dwmd {
+  border: 1px solid rgba(128, 160, 255, 255); /* Blue color for submit and close buttons */
+  color: rgba(128, 160, 255, 255);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+.wrp2 {
+  color: white;
+  padding: 10px 0px;
+  gap: 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+.apply {
+  background-color: rgba(128, 160, 255, 255);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-collapse: collapse;
+}
+
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.container2 {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.th1 {
+  border-top-left-radius: 15px;
+  overflow: hidden;
+  border: none;
+}
+.thlast {
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  border: none;
+}
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

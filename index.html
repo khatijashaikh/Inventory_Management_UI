@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="display-wrapper">
+      <div class="sidebar-wrapper">
+        <div class="logo-wrapper">
+          <img class="logo" src="./assests/logo.png" />
+        </div>
+        <div class="pages-wrapper">
+          <a href="./index.html" class="page-wrapper active">
+            <img class="page-icon" src="./assests/dashboard.png" />
+            <p>Dashboard</p>
+          </a>
+          <a href="./retail_analytics.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/retails.png" />
+            <p>Retail Analytics</p>
+          </a>
+          <a href="./retailer_management.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/retailmgment.png" />
+            <p>Retailer Management</p>
+          </a>
+          <a href="./customer_insights.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/customer.png" />
+            <p>Customer Insights</p>
+          </a>
+          <a href="./distributors.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/distributor&promotion.png" />
+            <p>Distributors</p>
+          </a>
+          <a href="./promotions.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/distributor&promotion.png" />
+            <p>Promotions</p>
+          </a>
+          <a href="./inventory_management.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/Clip path group.png" />
+            <p>Inventory Management</p>
+          </a>
+          <a href="./subscription_management.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/subscrip.png" />
+            <p>Subscription Management</p>
+          </a>
+          <button class="page-wrapper" onclick="toggleReport()">
+            <img class="page-icon" src="./assests/report.png" />
+            <p>Report & AI</p>
+            <img class="dropdown1" src="./assests/dropdown.png" />
+          </button>
+          <div id="reportDiv">
+            <a href="./sales.html" class="page-wrapper">
+              <div class="placeholder-div"></div>
+
+              <p>Sales</p>
+            </a>
+            <a href="./purchase.html" class="page-wrapper">
+              <div class="placeholder-div"></div>
+              <p>Purchase</p>
+            </a>
+          </div>
+
+          <button class="page-wrapper" onclick="toggleUser()">
+            <img class="page-icon" src="./assests/ph_flag.png" />
+            <p>User Accounts</p>
+
+            <img class="dropdown2" src="./assests/dropdown.png" />
+          </button>
+          <div id="userDiv">
+            <div class="page-wrapper">
+              <div class="placeholder-div"></div>
+
+              <p>Sales</p>
+            </div>
+            <div class="page-wrapper">
+              <div class="placeholder-div"></div>
+              <p>Purchase</p>
+            </div>
+          </div>
+          <button class="page-wrapper">
+            <img
+              class="page-icon"
+              src="./assests/ant-design_mobile-outlined.png"
+            />
+            <p>Loyalty Points Management</p>
+          </button>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="header-wrapper">
+          <div class="header-left">
+            <p class="page-name">Dashboard</p>
+            <p class="sub-page-name">Dashboard</p>
+          </div>
+          <div class="header-right">
+            <img class="header-right-icon" src="./assests/setting.png" />
+            <img class="header-right-icon" src="./assests/profile.png" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <img class="img" src="./assests/3.png" />
+            <img class="img" src="./assests/1.png" />
+            <img class="img" src="./assests/2.png" />
+            <img class="img" src="./assests/4.png" />
+          </div>
+          <div class="graph1">
+            <div class="section">
+              <p>Top Performing</p>
+              <button
+                class="mrch dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                By City<i class="fas fa-caret-down"></i>
+              </button>
+              <button
+                class="mrch dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                March 1, 2024 - March 25, 2024 <i class="fas fa-caret-down"></i>
+              </button>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th class="th1">City</th>
+                  <th class="thLast">Sales</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mumbai</td>
+                  <td>₹ 17,300</td>
+                </tr>
+                <tr>
+                  <td>Hyderabad</td>
+                  <td>₹ 70,300</td>
+                </tr>
+                <tr>
+                  <td>Chennai</td>
+                  <td>₹ 77,300</td>
+                </tr>
+                <tr>
+                  <td>Banglore</td>
+                  <td>₹ 17,700</td>
+                </tr>
+                <tr>
+                  <td>Amritsar</td>
+                  <td>₹ 19,300</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="btn-retails">GO TO RETAIL ANALYTICS</button>
+          <div class="graph2">
+            <div class="left-graph">
+              <div class="left-header">
+                <p>Overall Trend</p>
+                <div class="btn-wrapper">
+                  <button
+                    class="mrch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Sales<i class="fas fa-caret-down"></i>
+                  </button>
+                  <button
+                    class="mrch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Last year<i class="fas fa-caret-down"></i>
+                  </button>
+                </div>
+              </div>
+              <div id="chart"></div>
+            </div>
+            <div class="right-graph">
+              <div class="left-header">
+                <p>Retailer Onboarded</p>
+                <div class="btn-wrapper">
+                  <button
+                    class="mrch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Last 30 days<i class="fas fa-caret-down"></i>
+                  </button>
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th class="th1">City</th>
+                    <th>Sales</th>
+                    <th class="thLast">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mumbai</td>
+                    <td>₹17,300</td>
+                  </tr>
+                  <tr>
+                    <td>Hyderabad</td>
+                    <td>₹70,300</td>
+                  </tr>
+                  <tr>
+                    <td>Chennai</td>
+                    <td>₹77,300</td>
+                  </tr>
+                  <tr>
+                    <td>Banglore</td>
+                    <td>₹17,700</td>
+                  </tr>
+                  <tr>
+                    <td>Amritsar</td>
+                    <td>₹19,300</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="graph3">
+            <div class="left-header">
+              <p>Top Performing Retailer</p>
+              <div class="btn-wrapper">
+                <button
+                  class="mrch dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Last 30 days<i class="fas fa-caret-down"></i>
+                </button>
+              </div>
+            </div>
+            <div id="chart2"></div>
+          </div>
+          <div class="graph4">
+            <div class="left-header">
+              <p>Customer Acquisition</p>
+              <div class="btn-wrapper">
+                <button
+                  class="mrch dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Last 30 days<i class="fas fa-caret-down"></i>
+                </button>
+              </div>
+            </div>
+            <div id="chart3"></div>
+          </div>
+          <div class="graph5">
+            <div class="left-graph5">
+              <div class="left-header">
+                <p>Customer Age-Group</p>
+                <div class="btn-wrapper">
+                  <button
+                    class="mrch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Last 30 days<i class="fas fa-caret-down"></i>
+                  </button>
+                </div>
+              </div>
+              <div id="chart4"></div>
+            </div>
+
+            <div class="right-graph5">
+              <div class="left-header">
+                <p>Customer Gender-Analysis</p>
+                <div class="btn-wrapper">
+                  <button
+                    class="mrch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Last 30 days<i class="fas fa-caret-down"></i>
+                  </button>
+                </div>
+              </div>
+              <div id="chart5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

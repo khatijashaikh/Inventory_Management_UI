@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promotions</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="promotions.css" />
+  </head>
+  <body>
+    <div class="display-wrapper">
+      <div class="sidebar-wrapper">
+        <div class="logo-wrapper">
+          <img class="logo" src="./assests/logo.png" />
+        </div>
+        <div class="pages-wrapper">
+          <a href="./index.html" class="page-wrapper active">
+            <img class="page-icon" src="./assests/dashboard.png" />
+            <p>Dashboard</p>
+          </a>
+          <a href="./retail_analytics.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/retails.png" />
+            <p>Retail Analytics</p>
+          </a>
+          <a href="./retailer_management.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/retailmgment.png" />
+            <p>Retailer Management</p>
+          </a>
+          <a href="./customer_insights.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/customer.png" />
+            <p>Customer Insights</p>
+          </a>
+          <a href="./distributors.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/distributor&promotion.png" />
+            <p>Distributors</p>
+          </a>
+          <a href="./promotions.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/distributor&promotion.png" />
+            <p>Promotions</p>
+          </a>
+          <a href="./inventory_management.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/Clip path group.png" />
+            <p>Inventory Management</p>
+          </a>
+          <a href="./subscription_management.html" class="page-wrapper">
+            <img class="page-icon" src="./assests/subscrip.png" />
+            <p>Subscription Management</p>
+          </a>
+          <button class="page-wrapper" onclick="toggleReport()">
+            <img class="page-icon" src="./assests/report.png" />
+            <p>Report & AI</p>
+            <img class="dropdown1" src="./assests/dropdown.png" />
+          </button>
+          <div id="reportDiv">
+            <a href="./sales.html" class="page-wrapper">
+              <div class="placeholder-div"></div>
+
+              <p>Sales</p>
+            </a>
+            <a href="./purchase.html" class="page-wrapper">
+              <div class="placeholder-div"></div>
+              <p>Purchase</p>
+            </a>
+          </div>
+
+          <button class="page-wrapper" onclick="toggleUser()">
+            <img class="page-icon" src="./assests/ph_flag.png" />
+            <p>User Accounts</p>
+
+            <img class="dropdown2" src="./assests/dropdown.png" />
+          </button>
+          <div id="userDiv">
+            <div class="page-wrapper">
+              <div class="placeholder-div"></div>
+
+              <p>Sales</p>
+            </div>
+            <div class="page-wrapper">
+              <div class="placeholder-div"></div>
+              <p>Purchase</p>
+            </div>
+          </div>
+          <button class="page-wrapper">
+            <img
+              class="page-icon"
+              src="./assests/ant-design_mobile-outlined.png"
+            />
+            <p>Loyalty Points Management</p>
+          </button>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="header-wrapper">
+          <div class="header-left">
+            <p class="page-name">Promotions</p>
+            <p class="sub-page-name">Promotions</p>
+          </div>
+          <div class="header-right">
+            <img class="header-right-icon" src="./assests/setting.png" />
+            <img class="header-right-icon" src="./assests/profile.png" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="card">
+            <img class="img" src="./assests/3.png" />
+            <img class="img" src="./assests/1.png" />
+            <img class="img" src="./assests/2.png" />
+            <img class="img" src="./assests/4.png" />
+          </div>
+          <div class="advertisement-table">
+            <div class="container">
+              <div class="header">
+                <p>Recents Advertisement Table</p>
+              </div>
+              <div class="section">
+                <div class="search-box">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="Search by Submitted By, Submission Date"
+                  />
+                </div>
+                <div class="btn-head">
+                  <button
+                    class="mrch dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    March 1, 2024 - March 25, 2024
+                    <i class="fas fa-caret-down"></i>
+                  </button>
+
+                  <button
+                    class="filtr dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-filter"></i>
+                    Filter by
+
+                    <i class="fas fa-caret-down"></i>
+                  </button>
+                </div>
+              </div>
+
+              <table id="navtable">
+                <thead>
+                  <tr>
+                    <th class="th1"><input type="checkbox" /></th>
+                    <th>Sub.ID</th>
+                    <th>Submitted By</th>
+                    <th>Target Audience</th>
+                    <th>Submission</th>
+                    <th>Ad Budget</th>
+                    <th>Status</th>
+                    <th class="thlast">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Saurabh Sethi</td>
+                    <td>Department Stores</td>
+                    <td>10.01.2024</td>
+                    <td>₹2,558</td>
+                    <td>Pending</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Mohit Sharma</td>
+                    <td>General Stores</td>
+                    <td>11.01.2024</td>
+                    <td>₹2,958</td>
+                    <td>Under Review</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Sikha Sethi</td>
+                    <td>Malls</td>
+                    <td>07.01.2024</td>
+                    <td>₹1,558</td>
+                    <td>Modified</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Zubair Khan</td>
+                    <td>Discount Stores</td>
+                    <td>18.02.2024</td>
+                    <td>₹5,558</td>
+                    <td>Modified</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Anuradha</td>
+                    <td>Department Stores</td>
+                    <td>10.01.2023</td>
+                    <td>₹6,558</td>
+                    <td>Pending</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Saurabh Deshpande</td>
+                    <td>General Stores</td>
+                    <td>10.01.2024</td>
+                    <td>₹2,558</td>
+                    <td>Pending</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Sita Rama</td>
+                    <td>Department Stores</td>
+                    <td>16.06.2023</td>
+                    <td>₹2,558</td>
+                    <td>Modified</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Rohit Tyagi</td>
+                    <td>Department Stores</td>
+                    <td>30.11.2023</td>
+                    <td>₹2,558</td>
+                    <td>Pending</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Mukesh Sethi</td>
+                    <td>Department Stores</td>
+                    <td>10.01.2024</td>
+                    <td>₹1,558</td>
+                    <td>Under Review</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>#3245</td>
+                    <td>Ali Aman</td>
+                    <td>Department Stores</td>
+                    <td>18.01.2024</td>
+                    <td>₹9,558</td>
+                    <td>Modified</td>
+                    <td>
+                      <i class="fas fa-edit"></i> <i class="fas fa-trash"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="pagination-wrapper">
+                <div class="pgn-wrapper">
+                  10<i class="fas fa-caret-down"></i>
+                </div>
+                <div class="pgns-wrapper">
+                  <div class="prev">Prev</div>
+                  <div class="pgn1">1</div>
+                  <div class="pgn2">2</div>
+                  <div class="pgn3">3</div>
+                  <div class="next">Next</div>
+                </div>
+
+                <div class="empty-div"></div>
+              </div>
+            </div>
+          </div>
+          <div class="graph">
+            <div class="graph1">
+              <div class="left-header">
+                <p>Action Report</p>
+                <button
+                  class="yr dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Last Year
+                  <i class="fas fa-caret-down"></i>
+                </button>
+              </div>
+
+              <div id="chart-promotion"></div>
+            </div>
+            <div class="graph2">
+              <div class="right-header">
+                <p>Daily Visits Insights</p>
+              </div>
+              <div id="chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
