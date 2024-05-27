@@ -358,3 +358,82 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart-invent"), options);
 chart.render();
+
+var options = {
+  series: [
+    {
+      name: "Male",
+      data: [35, 41, 36, 26, 45, 48, 52],
+    },
+    {
+      name: " Female",
+      data: [35, 41, 36, 26, 45, 48, 52],
+    },
+  ],
+  chart: {
+    type: "bar",
+    height: 350,
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: "100%",
+      endingShape: "rounded",
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ["#89CFF0", "transparent"],
+  },
+  xaxis: {
+    categories: ["Sold", "Purchase"],
+  },
+  yaxis: {
+    title: {
+      text: "Value",
+    },
+  },
+  fill: {
+    opacity: 1,
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "$ " + val + " thousands";
+      },
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart-invent2"), options);
+chart.render();
+
+google.load("map", "1", { packages: ["GeoChart"] });
+google.setOnLoadCallback(drawmap);
+
+function drawmap() {
+  var data = google.map.arrayToDataTable([
+    ["state code", "state", "AQI PM2.5"],
+    ["IN-GJ", "Gujrat", 1304],
+    ["IN-PB", "Punjab", 300],
+    ["IN-HR", "Haryana", 300],
+    ["IN-KL", "Kerala", 311],
+  ]);
+
+  var opts = {
+    region: "IN",
+    domain: "IN",
+    displayMode: "regions",
+    colorAxis: { colors: ["#008000", "#FFFF00", "#0000FF"] },
+    resolutions: "provinces",
+    backgroundcolor: "#81d4fa",
+    defaultColor: "#f5f5f5",
+  };
+
+  var geochart = new google.map.GeoChart(document.getElementById("map"));
+  geochart.draw(data, opts);
+}

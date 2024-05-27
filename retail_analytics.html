@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retail Analytics</title>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -116,49 +117,53 @@
           </div>
 
           <div class="graph1">
-            <div class="section">
-              <p>Top Selling Product Categories</p>
-              <button
-                class="mrch dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                March 1, 2024 - March 25, 2024 <i class="fas fa-caret-down"></i>
-              </button>
+            <div class="graph1-table">
+              <div class="section">
+                <p>Top Selling Product Categories</p>
+                <button
+                  class="mrch dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  March 1, 2024 - March 25, 2024
+                  <i class="fas fa-caret-down"></i>
+                </button>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th class="th1">City</th>
+                    <th class="thLast">Sales</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mumbai</td>
+                    <td>₹ 17,300</td>
+                  </tr>
+                  <tr>
+                    <td>Hyderabad</td>
+                    <td>₹ 70,300</td>
+                  </tr>
+                  <tr>
+                    <td>Chennai</td>
+                    <td>₹ 77,300</td>
+                  </tr>
+                  <tr>
+                    <td>Banglore</td>
+                    <td>₹ 17,700</td>
+                  </tr>
+                  <tr>
+                    <td>Amritsar</td>
+                    <td>₹ 19,300</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <table>
-              <thead>
-                <tr>
-                  <th class="th1">City</th>
-                  <th class="thLast">Sales</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mumbai</td>
-                  <td>₹ 17,300</td>
-                </tr>
-                <tr>
-                  <td>Hyderabad</td>
-                  <td>₹ 70,300</td>
-                </tr>
-                <tr>
-                  <td>Chennai</td>
-                  <td>₹ 77,300</td>
-                </tr>
-                <tr>
-                  <td>Banglore</td>
-                  <td>₹ 17,700</td>
-                </tr>
-                <tr>
-                  <td>Amritsar</td>
-                  <td>₹ 19,300</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="map"></div>
           </div>
           <div class="graph2">
             <div class="left-graph2">
