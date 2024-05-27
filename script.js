@@ -301,3 +301,56 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart-promotion"), options);
 chart.render();
+
+var options = {
+  series: [
+    {
+      name: "Sales",
+      data: [35, 41, 36, 26, 45, 48, 52],
+    },
+    {
+      name: " Purchase",
+      data: [35, 41, 36, 26, 45, 48, 52],
+    },
+  ],
+  chart: {
+    type: "bar",
+    height: 350,
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: "100%",
+      endingShape: "rounded",
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ["#89CFF0", "transparent"],
+  },
+  xaxis: {
+    categories: ["Sold", "Purchase"],
+  },
+  yaxis: {
+    title: {
+      text: "Value",
+    },
+  },
+  fill: {
+    opacity: 1,
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "$ " + val + " thousands";
+      },
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart-invent"), options);
+chart.render();

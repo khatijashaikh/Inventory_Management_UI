@@ -133,7 +133,7 @@
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border: none;
   margin-top: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -141,7 +141,6 @@ table {
 th,
 td {
   padding: 12px 15px;
-  border: 1px solid #ddd;
   text-align: left;
   color: #333;
 }
