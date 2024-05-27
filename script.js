@@ -411,29 +411,3 @@ var options = {
 
 var chart = new ApexCharts(document.querySelector("#chart-invent2"), options);
 chart.render();
-
-google.load("map", "1", { packages: ["GeoChart"] });
-google.setOnLoadCallback(drawmap);
-
-function drawmap() {
-  var data = google.map.arrayToDataTable([
-    ["state code", "state", "AQI PM2.5"],
-    ["IN-GJ", "Gujrat", 1304],
-    ["IN-PB", "Punjab", 300],
-    ["IN-HR", "Haryana", 300],
-    ["IN-KL", "Kerala", 311],
-  ]);
-
-  var opts = {
-    region: "IN",
-    domain: "IN",
-    displayMode: "regions",
-    colorAxis: { colors: ["#008000", "#FFFF00", "#0000FF"] },
-    resolutions: "provinces",
-    backgroundcolor: "#81d4fa",
-    defaultColor: "#f5f5f5",
-  };
-
-  var geochart = new google.map.GeoChart(document.getElementById("map"));
-  geochart.draw(data, opts);
-}
