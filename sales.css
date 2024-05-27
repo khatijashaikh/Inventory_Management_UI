@@ -278,3 +278,67 @@ th {
   justify-content: space-between;
   width: 100%;
 }
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: end;
+  margin: 30px 0;
+}
+.pgn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(119, 119, 119, 0.5);
+}
+.pgns-wrapper {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgba(119, 119, 119, 0.5);
+}
+.prev {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+  border-right: 1px solid rgba(119, 119, 119, 0.5);
+}
+.pgn1 {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+  border-right: 1px solid rgba(119, 119, 119, 0.5);
+  background: rgba(88, 115, 197, 1);
+  color: #fff;
+}
+.pgn2 {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+  border-right: 1px solid rgba(119, 119, 119, 0.5);
+}
+.pgn3 {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+  border-right: 1px solid rgba(119, 119, 119, 0.5);
+}
+.next {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 30px;
+}
+.empty-div {
+  height: 20px;
+}

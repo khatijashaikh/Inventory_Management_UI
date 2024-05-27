@@ -248,12 +248,16 @@ chart.render();
 var options = {
   series: [
     {
-      name: "Desktops",
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 500, 87, 89],
+      name: "Rejected",
+      data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 100, 87, 89],
     },
     {
-      name: "Product",
+      name: "Modify",
       data: [87, 41, 35, 51, 65, 62, 69, 91, 48, 400, 87, 89],
+    },
+    {
+      name: "Approved",
+      data: [120, 41, 75, 53, 55, 26, 50, 91, 81, 200, 78, 98],
     },
   ],
   chart: {
@@ -268,7 +272,7 @@ var options = {
   },
   stroke: {
     curve: "smooth",
-    colors: ["#ff0000", "#000"],
+    colors: ["#ff0000", "#000", "#bf00ff"],
   },
   grid: {
     row: {
